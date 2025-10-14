@@ -7,13 +7,9 @@
 
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        // 'label' is deprecated, so let's remove it entirely for testing
-        // label = "default_kscan"; 
 
         diode-direction = "col2row";
 
-        // IMPORTANT: Ensure no comments are on the same line as the final > in the gpios list, or add a semicolon if they are. 
-        // We will remove all C-style comments to be safe.
         row-gpios = <&gpio1 38 0x01>,
                     <&gpio1 43 0x01>,
                     <&gpio0 10 0x01>,
@@ -23,7 +19,7 @@
                     <&gpio1 45 0x01>,
                     <&gpio1 47 0x01>,
                     <&gpio0 2 0x01>,
-                    <&gpio1 36 0x01>; // R9: P1.04 (36) - No comma, this is the last one.
+                    <&gpio1 36 0x01>;
 
         col-gpios = <&gpio0 24 0x08>,
                     <&gpio1 32 0x08>,
@@ -31,8 +27,8 @@
                     <&gpio0 11 0x08>,
                     <&gpio0 22 0x08>,
                     <&gpio0 20 0x08>,
-                    <&gpio0 13 0x08>; // C6: P0.13 - No comma, this is the last one.
-    }; // END of default_kscan node
+                    <&gpio0 13 0x08>;
+    };
 
     default_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
