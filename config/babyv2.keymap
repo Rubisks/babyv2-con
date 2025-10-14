@@ -6,36 +6,20 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-        
         default_layer {
-            bindings = <
-                // Row 0 First Half top row
-                &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp DEL
-                // second half of top row
-                &kp EQUAL &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS
-
-                // Row 2 (Was first 7 of Row 2)
-                &kp GRAVE &kp q    &kp w    &kp e  &kp r    &kp t    &kp BSLH
-                // Row 3 (Was second 7 of Row 2)
-                &kp RBKT  &kp y    &kp u    &kp i  &kp o    &kp p    &kp LBKT
-
-                // Row 4 (Was first 7 of Row 3)
-                &mo FN    &kp a    &kp s    &kp d  &kp f    &kp g    &kp TAB
-                // Row 5 (Was second 7 of Row 3)
-                &none     &kp h    &kp j    &kp k  &kp l    &kp SEMI &kp SQT
-
-                // Row 6 (Was first 7 of Row 4)
-                &none     &kp z    &kp x    &kp c  &kp v    &kp b    &kp CAPS
-                // Row 7 (Was second 7 of Row 4)
-                &none     &kp n    &kp m    &kp COMMA &kp DOT &kp FSLH &none
-
-                // Row 8 (Was first 5 of Row 5)
-                &kp LCTL  &kp LALT &kp LGUI &none  &kp LSFT &kp ENT  &kp BSPC
-                // Row 9 (Was second 5 of Row 5, padded to 7)
-                &none     &kp SPC  &kp RIGHT &kp UP &kp LEFT &kp DOWN &none
+         bindings = <
+             &kp A &kp B &kp C &kp D &kp E &kp F &kp G
+             &kp H &kp I &kp J &kp K &kp L &kp M &kp N
+             &trans &trans &trans &trans &trans &trans &trans
+             &trans &trans &trans &trans &trans &trans &trans
+             &trans &trans &trans &trans &trans &trans &trans
+             &trans &trans &trans &trans &trans &trans &trans
+             &trans &trans &trans &trans &trans &trans &trans
+             &trans &trans &trans &trans &trans &trans &trans
+             &trans &trans &trans &trans &trans &trans &trans
+             &trans &trans &trans &trans &trans &trans &trans
             >;
         };
-
         fn_layer {
             bindings = <
                 // Row 0 (Was first 7 of Row 1)
