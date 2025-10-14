@@ -1,0 +1,5 @@
+if SHIELD_BABYV2
+
+config ZMK_KEYBOARD_NAME
+    default "babyv2"
+endif
