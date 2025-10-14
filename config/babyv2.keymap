@@ -10,9 +10,9 @@
         default_layer {
             bindings = <
                 // Row 0 (Was first 7 of Row 1)
-                &kp ESC   &kp 1    &kp 2    &kp 3  &kp 4    &kp 5    &kp DEL
+                &kp ESC   &kp N1    &kp N2    &kp N3  &kp N4    &kp N5    &kp DEL
                 // Row 1 (Was second 7 of Row 1)
-                &kp EQUAL &kp 6    &kp 7    &kp 8  &kp 9    &kp 0    &kp MINUS
+                &kp EQUAL &kp N6    &kp N7    &kp N8  &kp N9    &kp N0    &kp MINUS
 
                 // Row 2 (Was first 7 of Row 2)
                 &kp GRAVE &kp q    &kp w    &kp e  &kp r    &kp t    &kp BSLH
