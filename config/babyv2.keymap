@@ -7,17 +7,16 @@
 
         base {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U
-&kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J
-&kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M
-&kp LSHIFT &kp LCTL &kp LALT &kp LGUI &kp SPACE &kp ENTER &kp TAB
-// 10 Rows * 7 Columns = 70 keys. Fill the rest with NO_OP (empty keys).
-&none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
+&none &none &none &none &none &none &none
             >;
         };
     };
