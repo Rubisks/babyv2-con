@@ -19,7 +19,7 @@
                 &none     &kp Z     &kp X     &kp C     &kp V     &kp B     &kp CAPS
                 &none     &kp N     &kp M     &kp COMMA &kp DOT   &kp SLASH &none
                 &kp RCTRL &kp RALT  &kp LGUI  &none     &kp RSHFT &none     &kp RET 
-                &kp bspc  &none     &kp SPACE &kp LEFT  &kp UP    &kp RIGHT &kp DOWN
+                &kp BSPC  &none     &kp SPACE &kp LEFT  &kp UP    &kp RIGHT &kp DOWN
             >;
         };
     };
