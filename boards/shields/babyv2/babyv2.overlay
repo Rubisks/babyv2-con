@@ -3,6 +3,7 @@
 / {
     chosen {
         zmk,matrix-transform = &default_transform; // ONLY keep the matrix transform
+        zmk,output = &out_usb;
     };
 
     default_kscan: kscan {
