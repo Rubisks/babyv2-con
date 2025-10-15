@@ -4,6 +4,111 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+
+    macros{
+        compatable = "zmk,macros";
+        // Double Quotes Macro: sends "", then LEFT ARROW
+        DQ: double_quotes {
+            label = "DQ";
+            wait-ms = <10>; 
+            tap = <
+                &kp ls(SQT) 
+                &kp ls(SQT)
+                &kp LEFT
+            >;
+        };
+        // Single Quotes
+        SQ: single_quotes {
+            label = "SQ";
+            wait-ms = <10>; 
+            tap = <
+                &kp SQT 
+                &kp SQT
+                &kp LEFT
+            >;
+        };
+        // Parenthes))es
+        PAREN: parenthes {
+            label = "PAREN";
+            wait-ms = <10>; 
+            tap = <
+                &kp LPAR
+                &kp LPAR
+                &kp LEFT
+            >;
+        };
+        // Stars
+        STAR: stars {
+            label = "STAR";
+            wait-ms = <10>; 
+            tap = <
+                &kp ls(N8)
+                &kp ls(N8)
+                &kp LEFT
+            >;
+        };
+        // Hashtag
+        HASHT: hastag {
+            label = "HASHT";
+            wait-ms = <10>; 
+            tap = <
+                &kp HASH
+                &kp HASH
+                &kp LEFT
+            >;
+        };
+        // Angle Brackets 
+        ABR: angle_brackets {
+            label = "ABR";
+            wait-ms = <10>; 
+            tap = <
+                &kp ls(COMMA)
+                &kp ls(DOT)
+                &kp LEFT
+            >;
+        };
+        // Square Brackets
+        SBR: square_brackets {
+            label = "SBR";
+            wait-ms = <10>; 
+            tap = <
+                &kp LBKT
+                &kp RBKT 
+                &kp LEFT
+            >;
+        };
+        // Curly Brackets
+        CBR: curly_brackets {
+            label = "CBR";
+            wait-ms = <10>; 
+            tap = <
+                &kp ls(LBKT)
+                &kp LS(RBKT)
+                &kp LEFT
+            >;
+        };
+        // Back tick
+        BTC: back_ticks {
+            label = "BTC";
+            wait-ms = <10>; 
+            tap = <
+                &kp GRAVE
+                &kp GRAVE
+                &kp LEFT
+            >;
+        };
+        // Tilde
+        TLD: tilde {
+            label = "TLD";
+            wait-ms = <10>; 
+            tap = <
+                &kp ls(GRAVE)
+                &kp ls(GRAVE)
+                &kp LEFT
+            >;
+        };
+        //
+    };
     keymap {
         compatible = "zmk,keymap";
         base {
@@ -11,7 +116,7 @@
             &kp ESC      &kp N1   &kp N2   &kp N3 &kp N4    &kp N5 &kp DEL  &kp EQUAL &kp N6 &kp N7    &kp N8    &kp N9  &kp N0    &kp MINUS
             &kp GRAVE    &kp Q    &kp W    &kp E  &kp R     &kp T  &kp NUBS &kp RBKT  &kp Y  &kp U     &kp I     &kp O   &kp P     &kp LBKT
             &mo 1        &kp A    &kp S    &kp D  &kp F     &kp G  &kp TAB  &none     &kp H  &kp J     &kp K     &kp L   &kp SEMI  &kp SQT
-            &out OUT_USB &kp Z    &kp X    &kp C  &kp V     &kp B  &kp CAPS &none     &kp N  &kp M     &kp COMMA &kp DOT &kp SLASH &none
+            &mo 2        &kp Z    &kp X    &kp C  &kp V     &kp B  &kp CAPS &none     &kp N  &kp M     &kp COMMA &kp DOT &kp SLASH &none
             &kp RCTRL    &kp RALT &kp LGUI &none  &kp RSHFT        &kp RET  &kp BSPC         &kp SPACE &kp LEFT  &kp UP  &kp RIGHT &kp DOWN
           >;
         };
@@ -24,5 +129,17 @@
             &trans &trans       &trans       &trans       &trans                     &trans &trans              &trans       &trans       &trans       &trans       &trans
           >;
         };
+        layer_2{
+          bindings = <
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+            &trans &trans &trans &trans &trans        &trans &trans        &trans &trans &trans &trans &trans
+          >; 
+        };
     };
 };
+
+// copy for new layer_1
+// &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
