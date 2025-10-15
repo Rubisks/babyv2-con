@@ -10,9 +10,9 @@
         // Double Quotes Macro: sends "", then LEFT ARROW
         DQ: double_quotes {
             label = "DQ";
-            wait-ms = <10>; 
+            wait-ms = <10>;
             tap = <
-                &kp ls(SQT) 
+                &kp ls(SQT)
                 &kp ls(SQT)
                 &kp LEFT
             >;
@@ -20,9 +20,9 @@
         // Single Quotes
         SQ: single_quotes {
             label = "SQ";
-            wait-ms = <10>; 
+            wait-ms = <10>;
             tap = <
-                &kp SQT 
+                &kp SQT
                 &kp SQT
                 &kp LEFT
             >;
@@ -30,7 +30,7 @@
         // Parenthes))es
         PAREN: parenthes {
             label = "PAREN";
-            wait-ms = <10>; 
+            wait-ms = <10>;
             tap = <
                 &kp LPAR
                 &kp LPAR
