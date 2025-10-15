@@ -4,111 +4,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-
-    macros{
-        compatable = "zmk,macros";
-        // Double Quotes Macro: sends "", then LEFT ARROW
-        DQ: double_quotes {
-            label = "DQ";
-            wait-ms = <10>;
-            tap = <
-                &kp ls(SQT)
-                &kp ls(SQT)
-                &kp LEFT
-            >;
-        };
-        // Single Quotes
-        SQ: single_quotes {
-            label = "SQ";
-            wait-ms = <10>;
-            tap = <
-                &kp SQT
-                &kp SQT
-                &kp LEFT
-            >;
-        };
-        // Parenthes))es
-        PAREN: parenthes {
-            label = "PAREN";
-            wait-ms = <10>;
-            tap = <
-                &kp LPAR
-                &kp LPAR
-                &kp LEFT
-            >;
-        };
-        // Stars
-        STAR: stars {
-            label = "STAR";
-            wait-ms = <10>; 
-            tap = <
-                &kp ls(N8)
-                &kp ls(N8)
-                &kp LEFT
-            >;
-        };
-        // Hashtag
-        HASHT: hastag {
-            label = "HASHT";
-            wait-ms = <10>; 
-            tap = <
-                &kp HASH
-                &kp HASH
-                &kp LEFT
-            >;
-        };
-        // Angle Brackets 
-        ABR: angle_brackets {
-            label = "ABR";
-            wait-ms = <10>; 
-            tap = <
-                &kp ls(COMMA)
-                &kp ls(DOT)
-                &kp LEFT
-            >;
-        };
-        // Square Brackets
-        SBR: square_brackets {
-            label = "SBR";
-            wait-ms = <10>; 
-            tap = <
-                &kp LBKT
-                &kp RBKT 
-                &kp LEFT
-            >;
-        };
-        // Curly Brackets
-        CBR: curly_brackets {
-            label = "CBR";
-            wait-ms = <10>; 
-            tap = <
-                &kp ls(LBKT)
-                &kp LS(RBKT)
-                &kp LEFT
-            >;
-        };
-        // Back tick
-        BTC: back_ticks {
-            label = "BTC";
-            wait-ms = <10>; 
-            tap = <
-                &kp GRAVE
-                &kp GRAVE
-                &kp LEFT
-            >;
-        };
-        // Tilde
-        TLD: tilde {
-            label = "TLD";
-            wait-ms = <10>; 
-            tap = <
-                &kp ls(GRAVE)
-                &kp ls(GRAVE)
-                &kp LEFT
-            >;
-        };
-        //
-    };
     keymap {
         compatible = "zmk,keymap";
         base {
@@ -136,7 +31,7 @@
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             &trans &trans &trans &trans &trans        &trans &trans        &trans &trans &trans &trans &trans
-          >; 
+          >;
         };
     };
 };
