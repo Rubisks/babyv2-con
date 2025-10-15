@@ -8,7 +8,7 @@
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
 
-        diode-direction = "col2row";
+        diode-direction = "row2col";
 
         row-gpios = <&gpio1 38 0x01>,
                     <&gpio1 43 0x01>,
