@@ -3,9 +3,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 
+
 / {
     keymap {
         compatible = "zmk,keymap";
+
         base {
           bindings = <
             &kp ESC      &kp N1   &kp N2   &kp N3 &kp N4    &kp N5 &kp DEL  &kp EQUAL &kp N6 &kp N7    &kp N8    &kp N9  &kp N0    &kp MINUS
