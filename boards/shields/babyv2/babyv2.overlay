@@ -28,7 +28,7 @@
                     <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&gpio1  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
                     <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>:
+                    <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
     default_transform: matrix_transform {
