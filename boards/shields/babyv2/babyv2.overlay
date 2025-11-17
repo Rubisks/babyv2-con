@@ -4,6 +4,7 @@
     chosen {
         zmk,kscan = &default_kscan;
         zmk,matrix-transform = &default_transform; // ONLY keep the matrix transform
+        zmk,underglow =&led_strip; 
     };
 
     default_kscan: kscan {
