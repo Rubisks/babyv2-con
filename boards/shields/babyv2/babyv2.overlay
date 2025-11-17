@@ -5,6 +5,17 @@
         zmk,kscan = &default_kscan;
         zmk,matrix-transform = &default_transform; // ONLY keep the matrix transform
     };
+    
+    sk6812: rgb {
+        compatible = "worldsemi,ws2812";
+        label = "RGB";
+        gpios = <&gpio0 8 GPIO_OUT>;
+        chain-length = <70>;
+        status = "okay";
+        /* STATIC PURPLE */
+        color = <128 0 255>;   /* R G B values */
+        brightness = <200>;    /* 0–255 */
+    };
 
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
@@ -41,7 +52,7 @@
             RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6) RC(3,6) RC(3,5) RC(3,4) RC(3,3) RC(3,2) RC(3,1) RC(3,0)
             RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(5,6) RC(5,5) RC(5,4) RC(5,3) RC(5,2) RC(5,1) RC(5,0)
             RC(6,0) RC(6,1) RC(6,2) RC(6,3) RC(6,4) RC(6,5) RC(6,6) RC(7,6) RC(7,5) RC(7,4) RC(7,3) RC(7,2) RC(7,1) RC(7,0)
-            RC(8,0) RC(8,1) RC(8,2) RC(8,3) RC(8,4)         RC(8,6) RC(9,6)         RC(9,4) RC(9,3) RC(9,2) RC(9,1) RC(9,0)
+            RC(8,0) RC(8,1) RC(8,2) RC(8,3) RC(8,4)         RC(8,6) RC(9,6)         RC(9,5) RC(9,3) RC(9,2) RC(9,1) RC(9,0)
         >;
     };
 };
