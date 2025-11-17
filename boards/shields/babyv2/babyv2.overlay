@@ -45,3 +45,27 @@
         >;
     };
 };
+/ {
+    ws2812: ws2812 {
+        compatible = "worldsemi,ws2812";
+        label = "WS2812";
+        chain-length = <68>;   /* Number of LEDs you have */
+
+        /* SK6812 Data Pin = P0.08 */
+        gpio = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+        status = "okay";
+    };
+};
+
+&zmk_rgb {
+    compatible = "zmk,underglow";
+    label = "RGB";
+    ws2812 = <&ws2812>;
+
+    /* Static purple color */
+    effect = "solid";
+    color = <128 0 128>;
+    brightness = <128>;
+
+    status = "okay";
+};
