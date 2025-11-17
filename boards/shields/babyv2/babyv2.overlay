@@ -57,7 +57,7 @@
     };
 };
 
-&zmk_rgb {
+&underglow {
     compatible = "zmk,underglow";
     label = "RGB";
     ws2812 = <&ws2812>;
