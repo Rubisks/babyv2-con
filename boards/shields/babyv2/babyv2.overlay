@@ -1,10 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/led/led.h>
 
 / {
     chosen {
         zmk,kscan = &default_kscan;
         zmk,matrix-transform = &default_transform; // ONLY keep the matrix transform
-        zmk,underglow =&led_strip; 
+        zmk,underglow = &led_strip; 
     };
 
     default_kscan: kscan {
@@ -46,7 +47,6 @@
         >;
     };
 };
-#include <dt-bindings/led/led.h>
 
 &pinctrl {
     spi3_default: spi3_default {
