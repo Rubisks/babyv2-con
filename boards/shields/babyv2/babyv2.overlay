@@ -5,17 +5,6 @@
         zmk,kscan = &default_kscan;
         zmk,matrix-transform = &default_transform; // ONLY keep the matrix transform
     };
-    
-    sk6812: rgb {
-        compatible = "worldsemi,ws2812";
-        label = "RGB";
-        gpios = <&gpio0 8 GPIO_OUT>;
-        chain-length = <70>;
-        status = "okay";
-        /* STATIC PURPLE */
-        color = <128 0 255>;   /* R G B values */
-        brightness = <200>;    /* 0–255 */
-    };
 
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
