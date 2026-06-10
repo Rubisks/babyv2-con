@@ -4,36 +4,69 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/led/led.h>
 #include <dt-bindings/zmk/rgb.h>
+/{
+  behaviors{
+    // allows for diffrent keys on press vs on tap
+    mt: custom_mod_tap {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        // ammount of time untill classified as a press 
+        tapping-term-ms = <200>;
+        // When taping twice quickly ignores hold for second press
+        // increase when cant press key fast engough quick-tap-ms = <125>;
+        quick-tap-ms = <125>;
+        bindings = <&kp>, <&kp>;
+    };
+    //Allows the shft_ent Macro to be run on hold vs on tap
+    ent_mt: enter_mod_tap{
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        // ammount of time untill classified as a press 
+        tapping-term-ms = <200>;
+        // When taping twice quickly ignores hold for second press
+        // increase when cant press key fast engough quick-tap-ms = <125>;
+        bindings = <&shft_ent>, <&kp>;
+    };
+    // allows for capitalizing untill space pressed
+    caps_word: caps_word{
+        compatible = "zmk,behavior-caps-word";
+        #binding-cells = <0>;
+        continue-list = <UNDERSCORE MINUS BSPC>; 
+    };
+  };
 
+};
 
 / {
     keymap {
         compatible = "zmk,keymap";
         base {
           bindings = <
-            &kp ESC      &kp N1   &kp N2   &kp N3 &kp N4    &kp N5 &kp DEL  &kp EQUAL &kp N6 &kp N7    &kp N8    &kp N9  &kp N0    &kp MINUS
-            &kp GRAVE    &kp Q    &kp W    &kp E  &kp R     &kp T  &kp NUBS &kp RBKT  &kp Y  &kp U     &kp I     &kp O   &kp P     &kp LBKT
-            &mo 1        &kp A    &kp S    &kp D  &kp F     &kp G  &kp N    &kp TAB   &kp H  &kp J     &kp K     &kp L   &kp SEMI  &kp SQT
-            &mo 2        &kp Z    &kp X    &kp C  &kp V     &kp B  &kp CAPS &none     &kp N  &kp M     &kp COMMA &kp DOT &kp SLASH &none
-            &kp RCTRL    &kp RALT &kp LGUI &none  &kp RSHFT        &kp RET  &kp BSPC         &kp SPACE &kp LEFT  &kp UP  &kp RIGHT &kp DOWN
+            &kp ESC      &kp N1   &kp N2   &kp N3 &kp N4 &kp N5    &kp DEL       &kp EQUAL     &kp N6        &kp N7 &kp N8      &kp N966   &kp N0     &kp MINUS
+            &kp GRAVE    &kp Q    &kp W    &kp E  &kp R  &kp T     &kp NUBS      &kp RBKT      &kp Y         &kp U  &kp I       &kp O      &kp P      &kp LBKT
+            &mo 1        &kp A    &kp S    &kp D  &kp F  &kp G     &kp N         &kp TAB       &kp H         &kp J  &kp K       &kp L      &kp SEMI   &kp SQT
+            &kp CAPS     &kp Z    &kp X    &kp C  &kp V  &kp B     &kp LG(PG_UP) &kp LG(PG_DN) &kp N         &kp M  &kp COMMA   &kp DOT    &kp SLASH  &none
+            &kp RCTRL    &kp RALT &kp LGUI &none  &none  &kp RSHFT &kp RET       &kp BSPC      &lt 1 SPACE   &mo 2  &kp RA(N1)  &kp RA(N2) &kp RA(N3) &kp RA(N4)
           >;
         };
         layer_1 {
           bindings = <
-            &trans &kp F1       &kp F2       &kp F3       &kp F4       &kp F5        &kp F6 &kp F7 &kp F8       &kp F9       &kp F10      &kp F11          &kp F12          &trans
-            &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &trans &trans &trans       &trans       &trans       &trans           &trans           &trans
-            &trans &bt BT_CLR   &trans       &trans       &trans       &trans        &trans &trans &trans       &kp LEFT     &kp UP       &kp RIGHT        &kp DOWN         &trans
-            &trans &trans       &out OUT_TOG &trans       &trans       &trans        &trans &trans &trans       &trans       &trans       &trans           &trans           &trans
-            &trans &trans       &trans       &trans       &trans                     &trans &trans              &trans       &trans       &trans           &trans           &trans
+            &trans &kp F1       &kp F2       &kp F3       &kp F4       &kp F5        &kp F6 &kp F7 &kp F8 &kp F9            &kp F10           &kp F11          &kp F12           &trans
+            &trans &trans       &trans       &trans       &trans       &trans        &trans &trans &trans &kp LS(LG(PG_UP)) &kp LS(LG(PG_DN)) &kp LS(LG(LEFT)) &kp LS(LG(RIGHT)) &trans
+            &trans &trans       &trans       &trans       &trans       &trans        &trans &trans &trans &kp LEFT          &kp UP            &kp RIGHT        &kp DOWN          &trans
+            &trans &trans       &trans       &trans       &trans       &trans        &trans &trans &trans &kp LG(UP)        &kp LG(LEFT)      &kp LG(RIGHT)    &trans            &trans
+            &trans &trans       &trans       &trans       &trans       &trnas        &trans &trans &trnas &trans            &trans            &trans           &trans            &trans
           >;
         };
         layer_2{
           bindings = <
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans          &trans          &trans          &trans &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &rgb_ug RGB_ON  &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &trans
-            &trans &trans &trans &trans &trans &trans &trans &trans &trans &rgb_ug RGB_OFF &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &trans
             &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans          &trans          &trans          &trans &trans
-            &trans &trans &trans &trans &trans        &trans &trans        &trans          &trans          &trans          &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans          &trans          &trans          &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans          &trans          &trans          &trans &trans
+            &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans          &trans          &trans          &trans &trans
           >;
         };
     };
