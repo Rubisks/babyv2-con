@@ -46,7 +46,7 @@
             &trans &trans       &trans       &trans       &trans       &trans        &trans &trans &trans &kp LS(LG(PG_UP)) &kp LS(LG(PG_DN)) &kp LS(LG(LEFT)) &kp LS(LG(RIGHT)) &trans
             &trans &trans       &trans       &trans       &trans       &trans        &trans &trans &trans &kp LEFT          &kp UP            &kp RIGHT        &kp DOWN          &trans
             &trans &trans       &trans       &trans       &trans       &trans        &trans &trans &trans &kp LG(UP)        &kp LG(LEFT)      &kp LG(RIGHT)    &trans            &trans
-            &trans &trans       &trans       &trans       &trans       &trans        &trans &trans &trnas &trans            &trans            &trans           &trans            &trans
+            &trans &trans       &trans       &trans       &trans       &trans        &trans &trans &trans &trans            &trans            &trans           &trans            &trans
           >;
         };
         layer_2{
