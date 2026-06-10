@@ -18,17 +18,6 @@
         quick-tap-ms = <125>;
         bindings = <&kp>, <&kp>;
     };
-    //Allows the shft_ent Macro to be run on hold vs on tap
-    ent_mt: enter_mod_tap{
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        // ammount of time untill classified as a press 
-        tapping-term-ms = <200>;
-        // When taping twice quickly ignores hold for second press
-        // increase when cant press key fast engough quick-tap-ms = <125>;
-        bindings = <&shft_ent>, <&kp>;
-    };
     // allows for capitalizing untill space pressed
     caps_word: caps_word{
         compatible = "zmk,behavior-caps-word";
